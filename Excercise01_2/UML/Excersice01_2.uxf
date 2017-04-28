@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>50</y>
+      <w>190</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>StackOverflowSimpleTopic</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>170</x>
+      <y>150</y>
+      <w>230</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>Topic
+--
+- _id : Long
+- _topicname : String
+- _postlist : Post[1..*]
+--
++ GetID():Long
++ GetTopicName(): String
++ GetPost(postID : Long) 
++ SetID(id : Long)
++ SetTopicName(topicName : String)
++ SetPostList(postList : Post[1..*])
++ AddPost(postItem : Post): Boolean
++ Update(postItem : Post): Boolean
++ RemovePost(postId : Long): Boolean
+--
+Responsibilities
+-- User to store Topic 
+item with PostList Inisde</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>490</x>
+      <y>150</y>
+      <w>210</w>
+      <h>290</h>
+    </coordinates>
+    <panel_attributes>Post
+--
+- _id : Long
+- _vote : Long
+- _username : String
+- _content : String
+--
++ GetID():Long
++ GetVote(): String
++ GetUsername(): String
++ GetContent(): String  
++ SetID(id : Long)
++ SetUsername(userName : String)
++ SetContent(content : String)
++ Voteup()
++ Votedown()  
+--
+Responsibilities
+-- store post for each topic </panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>70</x>
+      <y>100</y>
+      <w>740</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>Model\
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

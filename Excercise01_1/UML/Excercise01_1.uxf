@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>150</x>
+      <y>140</y>
+      <w>170</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>CustomsTimeWatch
+--
+- _watch: TimeSpan
+--
++ Start()
++ Stop()
+--
+Responsibilities
+-- simulate timestopwatch</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>110</x>
+      <y>60</y>
+      <w>670</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>Bussiness
+Model\
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>370</x>
+      <y>0</y>
+      <w>180</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>TimestopSimulate</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>110</x>
+      <y>420</y>
+      <w>670</w>
+      <h>340</h>
+    </coordinates>
+    <panel_attributes>Program
+Model\
+--
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>160</x>
+      <y>480</y>
+      <w>100</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+TextCommand
+--
+START
+STOP
+EXIT</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>480</y>
+      <w>280</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>_ManageCommand_
+--
+- _listOfTextCommand : String[1..*] &lt;&lt;static&gt;&gt;
+--
+- Contains(compare : String) : Boolean &lt;&lt;static&gt;&gt;
+--
+Responsibilities
+- use for validate command</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
