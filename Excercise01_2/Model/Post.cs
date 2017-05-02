@@ -13,24 +13,39 @@ namespace Excercise01_2.Model
         private String _username;
         private String _content;
 
-        Post()
+        public Post()
         {
-            this._vote = 0;
+            _vote = 0;
+        }
+        public Post(long id,String username,String content):this()
+        {
+            _id = id;
+            _username = username;
+            _content = content;
         }
 
         public long Id { get => _id; set => _id = value; }
         public long Vote { get => _vote;}
-        public string Username { get => _username; set => _username = value; }
+
+        public string Username
+        {
+            get => _username;
+            set
+            {
+                if (_username.Equals(String.Empty)) _username = value;
+                else Console.WriteLine("Change username DENIED!!");
+            }
+        }
         public string Content { get => _content; set => _content = value; }
 
         public bool VoteUp()
         {
-            this._vote = this._vote++;
+            _vote = _vote+1;
             return true;
         }
         public bool VoteDown()
         {
-            this._vote = this._vote--;
+            _vote = _vote-1;
             return true;
         }
 

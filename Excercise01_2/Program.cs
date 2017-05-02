@@ -23,12 +23,20 @@ namespace Excercise01_2
 
             //Variable//
             var keyInput = new StringBuilder();
-            var myTimeWatch = new CustomsTimeWatch();
+            var exampleTopic = new Topic(0,"Example Topic Stackoverflow post Simulate");
+            var postInExampleTopic = new Post(0, "Arnonthawajjana", "Wow!! That is nice ");
+            exampleTopic.AddPost(postInExampleTopic);
 
             //Process//
-            Console.WriteLine("Type 'start' or 'stop' use stopwatch or type 'exit' to close");
+            Console.WriteLine("Type 'voteup' or 'votedown' to gain or reduce vote type or 'exit' to close \n");
+            Console.WriteLine($"Topic: {exampleTopic.TopicName}");
+            Console.WriteLine("Post:");
+            Console.WriteLine($"username :{postInExampleTopic.Username} ,content :{postInExampleTopic.Content}");
+            Console.WriteLine($"vote :{postInExampleTopic.Vote}");
             while (true)
             {
+
+                
                 keyInput.Append(Console.ReadLine());
                 if (IsKeyExit(keyInput)) break;
                 else if (keyInput.Length.Equals(0))
@@ -41,7 +49,16 @@ namespace Excercise01_2
                 }
                 else
                 {
-    
+                    if (keyInput.ToString().ToUpper().Equals(TextCommand.VOTEUP.ToString()))
+                    {
+                        postInExampleTopic.VoteUp();
+                    }
+                    else if (keyInput.ToString().ToUpper().Equals(TextCommand.VOTEDOWN.ToString()))
+                    {
+                        postInExampleTopic.VoteDown();
+                    }
+                    Console.WriteLine($"current vote :{postInExampleTopic.Vote}");
+
                 }
                 keyInput.Clear();
 

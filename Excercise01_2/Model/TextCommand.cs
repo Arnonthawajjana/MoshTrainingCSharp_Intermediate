@@ -8,8 +8,8 @@ namespace Excercise01_2.Model
 {
     public enum TextCommand
     {
-        GETPOST,
-        POST,
+        //GETPOST,
+        //POST,
         VOTEUP,
         VOTEDOWN,
         EXIT
