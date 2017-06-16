@@ -42,7 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\DBConnection.cs" />
+    <Compile Include="Model\AbstractDbConnection.cs" />
+    <Compile Include="Model\DBCommand.cs" />
+    <Compile Include="Model\IDbConnection.cs" />
     <Compile Include="Model\OracleConnection.cs" />
     <Compile Include="Model\SqlConnection.cs" />
     <Compile Include="Program.cs" />
