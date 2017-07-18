@@ -11,18 +11,18 @@ namespace Excercise03.Model
     {
         public OracleConnection(string connectionString) : base(connectionString)
         {
-            Console.WriteLine("Oracle Connection Initailize");
+            Console.WriteLine($"{this.GetType().Name} Initailize");
         }
 
         public override bool OpenConnection()
         {
-            Console.WriteLine("Connected");
+            Console.WriteLine($"\n{this.GetType().Name} Connected");
             return true;
         }
 
         public override bool CloseConnection()
         {
-            Console.WriteLine("Disconnected");
+            Console.WriteLine($"{this.GetType().Name} Disconnected");
             return true;
         }
     }

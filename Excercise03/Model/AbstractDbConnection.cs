@@ -12,9 +12,6 @@ namespace Excercise03.Model
 
         private TimeSpan _TimeOut;
 
-        public string ConnectionString { get => _ConnectionString; }
-        public TimeSpan TimeOut { get => _TimeOut; set => _TimeOut = value; }
-
         protected AbstractDbConnection(String connectionString)
         {
             if (String.IsNullOrEmpty(connectionString))
@@ -23,6 +20,11 @@ namespace Excercise03.Model
             }
             _ConnectionString = connectionString;
         }
+
+        public string ConnectionString { get => _ConnectionString; }
+
+        public TimeSpan TimeOut { get => _TimeOut; set => _TimeOut = value; }
+
         abstract public bool OpenConnection();
 
         abstract public bool CloseConnection();

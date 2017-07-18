@@ -8,20 +8,23 @@ namespace Excercise03.Model
 {
     class SqlConnection : AbstractDbConnection
     {
+        private TimeSpan _simTimeSpan;
+
         public SqlConnection(string connectionString) : base(connectionString)
         {
-            Console.WriteLine("SQL Connection Initailize");
+            _simTimeSpan = new TimeSpan();
+            Console.WriteLine($"{this.GetType().Name} Initailize");
         }
 
         public override bool OpenConnection()
         {
-            Console.WriteLine("Connected");
+            Console.WriteLine($"\n{this.GetType().Name} Connected");
             return true;
         }
 
         public override bool CloseConnection()
         {
-            Console.WriteLine("Disconnected");
+            Console.WriteLine($"{this.GetType().Name} Disconnected");
             return true;
         }
     }
